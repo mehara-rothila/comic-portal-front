@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Global styles for Comic Portal */
+@layer components {
+  /* Common card styling */
+  .comic-card {
+    @apply bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1;
+  }
+
+  /* Common text truncation */
+  .line-clamp-2 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  /* Loading animation */
+  .loading-spinner {
+    @apply animate-spin rounded-full h-12 w-12 border-4 border-yellow-500 border-t-transparent;
+  }
+
+  /* Error alerts */
+  .error-alert {
+    @apply bg-red-50 border-l-4 border-red-400 p-4 rounded;
+  }
+  
+  /* Empty state alert */
+  .empty-alert {
+    @apply bg-yellow-50 border-l-4 border-yellow-400 p-4 rounded;
+  }
+  
+  /* Common button style */
+  .primary-button {
+    @apply bg-yellow-400 text-yellow-900 px-4 py-2 rounded hover:bg-yellow-500 transition duration-200 font-medium;
+  }
+  
+  /* Secondary button style */
+  .secondary-button {
+    @apply text-yellow-600 hover:text-yellow-800 transition duration-200 font-medium;
+  }
+}
