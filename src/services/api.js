@@ -2,8 +2,11 @@
 import axios from 'axios';
 import router from '@/router';
 
+// Use environment variables or default to localhost for development
+const backendUrl = import.meta.env.VITE_BACKEND_URL || 'http://localhost:8000';
+
 const api = axios.create({
-    baseURL: 'http://localhost:8000/api',
+    baseURL: `${backendUrl}/api`,
     headers: {
         'Accept': 'application/json',
         'X-Requested-With': 'XMLHttpRequest'
